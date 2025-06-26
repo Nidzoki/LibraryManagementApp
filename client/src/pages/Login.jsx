@@ -1,25 +1,31 @@
-import { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../css/Login.css'; 
 
-export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Login() {
+  const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('/api/login', { email, password });
-      alert(res.data.message);
-    } catch (err) {
-      alert(err.response.data.error);
-    }
-  };
+  const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate('/admin');
+    };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit">Login</button>
-    </form>
+  return( 
+    <div className="login-container">
+      <h1 className="login-title">Login Page</h1>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" className="login-button">Login</button>
+      </form>
+    </div>
   );
 }
+
+export default Login;
