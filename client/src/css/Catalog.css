@@ -1,0 +1,108 @@
+.catalog-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.catalog-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #2d3748;
+    text-align: center;
+}
+
+.catalog-search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.catalog-search-bar input[type="text"] {
+    width: 320px;
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px 0 0 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.catalog-search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background: #3182ce;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.catalog-search-bar button:hover {
+    background: #2563eb;
+}
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.catalog-item {
+    background: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+
+.catalog-item:hover {
+    box-shadow: 0 4px 16px rgba(49,130,206,0.12);
+}
+
+.catalog-item-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2b6cb0;
+    margin-bottom: 8px;
+}
+
+.catalog-item-author {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+.catalog-item-description {
+    font-size: 0.98rem;
+    color: #718096;
+    margin-bottom: 12px;
+}
+
+.catalog-item-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.catalog-item-actions button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #38a169;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.catalog-item-actions button:hover {
+    background: #2f855a;
+}

@@ -35,3 +35,9 @@ body::before {
     margin: 4% 0;
 }
 
+.login-error {
+  color: #d32f2f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+

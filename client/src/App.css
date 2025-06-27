@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Set base font and background */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #222;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Container for main content */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #2d3a4b;
+    margin-bottom: 16px;
 }
 
-.card {
-  padding: 2em;
+/* Links */
+a {
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #125ea2;
+    text-decoration: underline;
 }
 
-.read-the-docs {
-  color: #888;
+/* Buttons */
+button {
+    background-color: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
 }
+button:hover {
+    background-color: #125ea2;
+}
+
+/* Forms */
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Utility classes */
+.mt-2 { margin-top: 16px; }
+.mb-2 { margin-bottom: 16px; }
+.text-center { text-align: center; }

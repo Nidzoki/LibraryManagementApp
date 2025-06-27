@@ -5,12 +5,12 @@ import '../css/Home.css';
 function Home() {
   return (
     <div className="home-container">
-      <h1 className="home-title">Welcome to Library Manager</h1>
-      
-      <Link to="/login">
-        <button className="home-button">Login</button>
-      </Link>
-
+      <h1 className="home-title">Dobrodošli u Library Manager</h1>
+      <div className="home-buttons">
+        <Link to="/login">
+          <button className="home-button">Prijava</button>
+        </Link>
+      </div>
     </div>
   );
 }
